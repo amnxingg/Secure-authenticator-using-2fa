@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Secure Authenticator · Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> EXTRA LAYER. MORE PEACE OF MIND.</div>
+    <h1>Your account.<br><span>More secure.</span></h1>
+    <p class="hero-text">A simple two-factor authentication website that adds a second check to your sign-in. Your password is only the first step.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="{{ url_for('register') }}">Create an account <span>↗</span></a>
+      <a class="button secondary" href="{{ url_for('login') }}">I already have an account</a>
+    </div>
+    <div class="trust-line"><span>✓</span> Password hashing <span>✓</span> Time-based OTP <span>✓</span> QR setup</div>
+  </div>
+  <div class="security-card">
+    <div class="card-top"><span class="mini-label">SECURITY CHECK</span><span class="status-dot">● ACTIVE</span></div>
+    <div class="shield">⌑</div>
+    <h3>Two steps. One safer login.</h3>
+    <div class="step-row"><span class="step-number">01</span><div><b>Your password</b><small>Something you know</small></div><span class="check">✓</span></div>
+    <div class="step-row"><span class="step-number">02</span><div><b>Authenticator code</b><small>Something you have</small></div><span class="check">✓</span></div>
+    <div class="card-bottom"><span class="lock">▣</span> An extra layer between your account and unwanted access.</div>
+  </div>
+</section>
+{% endblock %}

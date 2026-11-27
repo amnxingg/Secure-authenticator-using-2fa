@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Create account · SecureAuth{% endblock %}
+{% block content %}
+<section class="auth-layout">
+  <div class="auth-aside"><div class="eyebrow">START WITH THE BASICS</div><h1>Make your<br>account yours.</h1><p>Create your account first. We'll help you connect an authenticator app in the next step.</p><div class="aside-note">✦ &nbsp; Your password is stored as a salted hash, not plain text.</div></div>
+  <form class="form-card" method="post">
+    <div class="form-kicker">NEW ACCOUNT</div><h2>Create account</h2><p class="muted">A few details and you're on your way.</p>
+    <label for="username">Username</label><input id="username" name="username" autocomplete="username" minlength="3" required placeholder="Choose a username">
+    <label for="password">Password</label><div class="password-wrap"><input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters"><button class="toggle-password" type="button" data-toggle="password">Show</button></div>
+    <label for="confirm_password">Confirm password</label><input id="confirm_password" name="confirm_password" type="password" autocomplete="new-password" required placeholder="Enter it again">
+    <button class="button primary full" type="submit">Create account <span>→</span></button>
+    <p class="form-foot">Already registered? <a href="{{ url_for('login') }}">Log in</a></p>
+  </form>
+</section>
+{% endblock %}

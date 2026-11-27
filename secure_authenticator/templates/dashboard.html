@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · SecureAuth{% endblock %}
+{% block content %}
+<section class="dashboard">
+  <div class="eyebrow"><span class="pulse"></span> AUTHENTICATED SESSION</div>
+  <h1>You're in, <span>{{ username }}.</span></h1>
+  <p class="hero-text">Your password and authenticator code were both verified successfully.</p>
+  <div class="dashboard-grid">
+    <div class="dash-card"><div class="dash-icon">✓</div><div class="form-kicker">FIRST FACTOR</div><h3>Password verified</h3><p class="muted">Your account password was checked.</p><span class="verified">VERIFIED</span></div>
+    <div class="dash-card"><div class="dash-icon">⌑</div><div class="form-kicker">SECOND FACTOR</div><h3>OTP verified</h3><p class="muted">Your time-based authenticator code was accepted.</p><span class="verified">VERIFIED</span></div>
+  </div>
+  <a class="button secondary" href="{{ url_for('logout') }}">Log out securely</a>
+</section>
+{% endblock %}

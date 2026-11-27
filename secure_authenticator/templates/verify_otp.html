@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Verify OTP · SecureAuth{% endblock %}
+{% block content %}
+<section class="narrow-page">
+  <form class="form-card otp-card" method="post">
+    <div class="otp-symbol">⌑</div><div class="form-kicker">SECOND SECURITY CHECK</div><h2>Check it's you</h2><p class="muted">Open your authenticator app and enter the current six-digit code for Secure Authenticator.</p>
+    <label for="code">Authenticator code</label><input class="otp-input" id="code" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9 ]{6,8}" maxlength="8" required placeholder="000 000" autofocus>
+    <button class="button primary full" type="submit">Verify and log in <span>→</span></button>
+    <p class="tiny muted center">Codes refresh about every 30 seconds.</p>
+  </form>
+</section>
+{% endblock %}
